@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+  <br><br><br><br><br>
+  <div id="msg"></div><br><br><br>
+  <button  onclick="mostrar()">"רוח"</button>
+  <br><br>
+  <h4 id="pergunta" >bem aventurados os que choram , por que eles... </h4>
+  <br><br>
+  <input type="text" id="resposta">
+  <br><br>
+  <button id="seguir"style="font-size:30px;width:50px;
+    height:50px;background:transparent;"onclick="certo()">∆</button>
+  
+   
+  <body>
+    <script>
+        seguir.style.display="none";
+    pergunta.style.display="none";
+       resposta.style.display="none";
+    const nomeexibir1=localStorage.getItem("nome");
+    const msg=document.getElementById("msg");
+    msg.innerHTML="não seja <br>"+"confiante nesse<br> "+"  jogo     " +  nomeexibir1;
+    </script>
+  <script>
+   function mostrar(){
+     
+     const  pergunta=document.getElementById("pergunta");
+     const  seguir=document.getElementById("seguir");
+     const  resposta=document.getElementById("resposta");
+     
+    pergunta.style.display="";
+    resposta.style.display="";
+     seguir.style.display="";
+     
+   }
+  </script>
+<script>
+function certo(){
+  const  resposta=document.getElementById("resposta").value;
+     if(resposta.toLowerCase()==="serao consolados"){
+      window.location="index.pag4.html";
+     }
+}
+
+</script>
+    <style>
+       body{
+                text-align:center;
+                background-color:black;
+       }h4{
+          color:white;
+       }h1{
+         color:white;
+         font-family:georgia;
+         font-size:30px;
+             }div{
+               color:white;
+         font-family:georgia;
+         font-size:30px;
+                           }input{
+              width: 300px;
+              height:40px;
+              border:solid 2px red;
+              border-radius:3%;
+              outline:none;
+              caret-color:solid 1px white;
+              font-size:20px;
+              background-color:transparent;
+              color:red;
+             }
+               button{
+              width: 150px;
+              height:150px;
+              border:solid 1px red;
+              border-radius:50%;
+              font-size:30px;
+              background-color:red;
+              color:red;
+                 font-family:georgia;
+        }button:hover{
+              transition: all 50s;
+              background-color:transparent;
+              color:red;
+              border-color:transparent;  
+          box-shadow:4px 5px 180000px 150px red;
+            }
+</style>
+    
+  </body>
+</head>
